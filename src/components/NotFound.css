@@ -1,0 +1,35 @@
+/* Default styling for desktop and larger screens */
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f5f5f5; /* Light background for better visibility */
+  }
+  
+  .not-found h2 {
+    font-size: 3rem;
+    color: black;
+  }
+  
+  /* Adjust font size for tablets and smaller screens */
+  @media (max-width: 1200px) {
+    h2 {
+      font-size: 8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 6rem;
+    }
+  }
+  
+  /* Further reduce font size for mobile phones */
+  @media (max-width: 480px) {
+    h2 {
+      font-size: 4rem;
+    }
+  }
+  

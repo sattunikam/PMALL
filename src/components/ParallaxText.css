@@ -1,0 +1,21 @@
+/* src/components/ParallaxText.css */
+.parallax {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .scroller {
+    display: inline-flex;
+    gap: 50px; /* Space between each repetition */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .scroller span {
+    display: inline-block;
+    padding: 10px 20px;
+  }
+  

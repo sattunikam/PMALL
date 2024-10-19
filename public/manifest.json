@@ -1,0 +1,16 @@
+{
+    "name": "PMALL",
+    "short_name": "PMALL",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ff5a5f",
+    "icons": [
+      {
+        "src": "/favicon.png", 
+        "sizes": "16x16",
+        "type": "image/png"
+      }
+    ]
+  }
+  

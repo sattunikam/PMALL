@@ -1,0 +1,228 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height to fit the screen */
+    width: 100%; /* Full width */
+    background-color: #fff; /* background */
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative; /* For overlay */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Background Bubble Animation */
+  .contact::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    background: rgba(255, 90, 95, 0.2);
+    border-radius: 50%;
+    z-index: 0; /* Behind the content */
+    transform: translate(-50%, -50%); /* Center the bubble initially */
+    animation: move-bubble 10s infinite ease-in-out alternate;
+  }
+  
+  @keyframes move-bubble {
+    0% {
+      transform: translate(-50%, -50%) translateX(0px) translateY(0px);
+    }
+    25% {
+      transform: translate(-50%, -50%) translateX(100px) translateY(-50px);
+    }
+    50% {
+      transform: translate(-50%, -50%) translateX(150px) translateY(150px);
+    }
+    75% {
+      transform: translate(-50%, -50%) translateX(-100px) translateY(100px);
+    }
+    100% {
+      transform: translate(-50%, -50%) translateX(-150px) translateY(-150px);
+    }
+  }
+  
+  .contact h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .contact h3 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #555;
+    font-weight: normal;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 5px 0;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 30%; /* Make full width on mobile */
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f85e5e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .contact-item:hover {
+    background: #e14b4b;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .contact-icon {
+    margin-right: 15px;
+    font-size: 30px;
+    transition: transform 0.2s;
+    color: white;
+  }
+  
+  .contact-icon:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .contact-link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #f3eaea;
+    text-shadow: 0 0 8px rgba(255, 90, 95, 0.8);
+  }
+  
+  .contact-button {
+    padding: 10px 25px;
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-button:hover {
+    background-color: #e14b4b;
+    transform: scale(1.05);
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* For tablets */
+  @media (max-width: 768px) {
+  
+    .contact-details {
+      width: 50%;
+    }
+  
+    .contact h2 {
+      font-size: 32px;
+    }
+  
+    .contact-item {
+      width: 80%;
+      padding: 12px 15px;
+    }
+  }
+  
+  /* For mobile screens */
+  @media (max-width: 480px) {
+  
+    .contact-details {
+      width: 80%;
+    }
+  
+    .contact {
+      padding: 20px;
+    }
+  
+    .contact h2 {
+      font-size: 24px;
+    }
+  
+    .contact-item {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    .contact-icon {
+      font-size: 25px;
+    }
+  
+    .contact-link {
+      font-size: 18px;
+    }
+  
+    .contact-button {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .contact-details {
+      width: 80%;
+    }
+  
+    .contact {
+      padding: 20px;
+    }
+  
+    .contact h2 {
+      font-size: 24px;
+    }
+  
+    .contact-item {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    .contact-icon {
+      font-size: 25px;
+    }
+  
+    .contact-link {
+      font-size: 16px;
+    }
+  
+    .contact-button {
+      font-size: 16px;
+      padding: 8px 20px;
+    }
+  }
+  

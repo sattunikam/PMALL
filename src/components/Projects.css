@@ -1,0 +1,97 @@
+/* Projects.css */
+
+.projects {
+  padding: 40px 20px; /* Padding around the projects section */
+  background-color: #f9f9f9; /* Light gray background for contrast */
+}
+
+.projects h2 {
+  text-align: center; /* Centering the title */
+  margin-top: 85px; /* Margin above the title */
+  margin-bottom: 30px; /* Margin below the title */
+  font-size: 2.5rem; /* Title font size */
+  color: #333; /* Dark color for readability */
+}
+
+.projects-grid {
+  display: grid; /* Using grid layout for project cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between cards */
+}
+
+.project-card {
+  padding: 20px; /* Padding inside the project card */
+  background: #fff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  text-align: center; /* Centering text inside the card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.project-image {
+  width: 100%; /* Full width for the image */
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Cover the area of the card */
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-bottom: 10px; /* Space below the image */
+  transition: opacity 0.5s; /* Transition for opacity */
+  opacity: 0; /* Start with image hidden */
+}
+
+.project-card img.lazyloaded {
+  opacity: 1; /* Fully visible when loaded */
+}
+
+.project-card h3 {
+  font-size: 1.5rem; /* Font size for project title */
+  margin: 10px 0; /* Margin around the title */
+  color: #555; /* Medium gray for title text */
+}
+
+.project-card p {
+  font-size: 1.2rem; /* Font size for price */
+  margin: 10px 0; /* Margin around the price */
+  color: #777; /* Light gray for price text */
+}
+
+.project-card button {
+  padding: 10px 20px; /* Padding inside the button */
+  background-color: #ff5a5f; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.project-card button:hover {
+  background-color: #beed9f; /* Change button color on hover */
+}
+
+/* "View Demo" button */
+.view-demo-btn {
+  background-color: #007bff !important; /* Different color for View Demo */
+  margin: 10px;
+}
+
+.view-demo-btn:hover {
+  background-color: #f3acdf !important; 
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .projects {
+      padding: 20px; /* Reduce padding on smaller screens */
+  }
+
+  .projects h2 {
+      font-size: 1.8rem; /* Smaller title font size */
+  }
+
+  .project-card h3 {
+      font-size: 1.3rem; /* Smaller title size */
+  }
+
+  .project-card p {
+      font-size: 1rem; /* Smaller price size */
+  }
+}
